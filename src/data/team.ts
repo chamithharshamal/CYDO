@@ -1,0 +1,38 @@
+export const team = [
+  {
+    name: "Kasun Rajapaksha",
+    role: "Founder & CEO",
+    bio: "10+ years leading digital transformation projects across Asia. Former CTO at a Colombo-based FinTech startup.",
+    avatar: "/images/team/member1.jpg",
+    linkedin: "https://linkedin.com",
+    twitter: "https://twitter.com",
+    github: "https://github.com",
+  },
+  {
+    name: "Dilhani Fernando",
+    role: "Head of Design",
+    bio: "Award-winning UI/UX designer with expertise in creating intuitive digital experiences for healthcare and education.",
+    avatar: "/images/team/member2.jpg",
+    linkedin: "https://linkedin.com",
+    twitter: "https://twitter.com",
+    github: "https://github.com",
+  },
+  {
+    name: "Nuwan Perera",
+    role: "Lead Engineer",
+    bio: "Full-stack architect specializing in cloud-native applications. AWS certified, passionate about scalable systems.",
+    avatar: "/images/team/member3.jpg",
+    linkedin: "https://linkedin.com",
+    twitter: "https://twitter.com",
+    github: "https://github.com",
+  },
+  {
+    name: "Sachini De Silva",
+    role: "Project Manager",
+    bio: "PMP-certified project manager ensuring on-time delivery. Expert in Agile methodologies and client communication.",
+    avatar: "/images/team/member4.jpg",
+    linkedin: "https://linkedin.com",
+    twitter: "https://twitter.com",
+    github: "https://github.com",
+  },
+]
