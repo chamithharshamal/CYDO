@@ -29,8 +29,8 @@ export default function PortfolioPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative overflow-hidden border-b border-border bg-gradient-to-b from-violet-950/30 to-transparent py-20 md:py-28 lg:py-32">
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-violet-600/8 blur-[120px]" />
+      <section className="relative overflow-hidden border-b border-border bg-gradient-to-b from-purple-950/30 to-transparent py-20 md:py-28 lg:py-32">
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-purple-600/8 blur-[120px]" />
         <div className="relative mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading
             badge="Portfolio"
@@ -58,7 +58,7 @@ export default function PortfolioPage() {
             {filtered.map((project, i) => (
               <ScrollReveal key={project.slug} delay={i * 0.1}>
                 <Link href={`/portfolio/${project.slug}`}>
-                  <Card className="group h-full overflow-hidden border-border/50 bg-card transition-all duration-300 hover:-translate-y-2 hover:border-indigo-500/50 hover:shadow-xl hover:shadow-indigo-500/5">
+                  <Card className="group h-full overflow-hidden border-border/50 bg-card transition-all duration-300 hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/5">
                     <div className="relative aspect-video overflow-hidden">
                       {projectImages[project.slug] ? (
                         <Image
@@ -68,7 +68,7 @@ export default function PortfolioPage() {
                           className="object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                       ) : (
-                        <div className="h-full w-full bg-gradient-to-br from-indigo-600/20 to-violet-600/20 flex items-center justify-center">
+                        <div className="h-full w-full bg-gradient-to-br from-purple-600/20 to-pink-600/20 flex items-center justify-center">
                           <span className="text-lg font-semibold text-white/40">{project.title}</span>
                         </div>
                       )}
@@ -79,7 +79,7 @@ export default function PortfolioPage() {
                       </div>
                     </div>
                     <CardContent className="p-6">
-                      <Badge className="bg-indigo-500/10 text-indigo-400 hover:bg-indigo-500/20">
+                      <Badge className="bg-purple-500/10 text-purple-400 hover:bg-purple-500/20">
                         {project.category}
                       </Badge>
                       <h3 className="mt-3 text-lg font-semibold">{project.title}</h3>

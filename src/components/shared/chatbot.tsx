@@ -75,7 +75,7 @@ export function Chatbot() {
             className="mb-4 w-[380px] overflow-hidden rounded-3xl border border-white/10 bg-zinc-950/90 shadow-2xl backdrop-blur-2xl md:w-[420px]"
           >
             {/* Header */}
-            <div className="flex items-center justify-between bg-gradient-to-r from-indigo-600 to-purple-600 p-5 text-white shadow-lg">
+            <div className="flex items-center justify-between bg-gradient-to-r from-purple-600 to-pink-600 p-5 text-white shadow-lg">
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
                   <Bot className="h-6 w-6" />
@@ -110,14 +110,14 @@ export function Chatbot() {
                     className={`flex items-start gap-3 ${msg.role === "user" ? "flex-row-reverse" : ""}`}
                   >
                     <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${
-                      msg.role === "user" ? "bg-indigo-600" : "bg-white/5 border border-white/10"
+                      msg.role === "user" ? "bg-purple-600" : "bg-white/5 border border-white/10"
                     }`}>
-                      {msg.role === "user" ? <User className="h-4 w-4 text-white" /> : <Bot className="h-4 w-4 text-indigo-400" />}
+                      {msg.role === "user" ? <User className="h-4 w-4 text-white" /> : <Bot className="h-4 w-4 text-purple-400" />}
                     </div>
                     <div
                       className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-sm ${
                         msg.role === "user"
-                          ? "bg-indigo-600 text-white rounded-tr-none font-medium"
+                          ? "bg-purple-600 text-white rounded-tr-none font-medium"
                           : "bg-zinc-900 text-zinc-100 border border-white/5 rounded-tl-none"
                       }`}
                     >
@@ -141,7 +141,7 @@ export function Chatbot() {
                 {isLoading && (
                   <div className="flex items-start gap-3">
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 border border-white/10">
-                      <Bot className="h-4 w-4 text-indigo-400" />
+                      <Bot className="h-4 w-4 text-purple-400" />
                     </div>
                     <div className="flex gap-1.5 rounded-2xl bg-zinc-900 border border-white/5 px-4 py-3">
                       <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-zinc-400" />

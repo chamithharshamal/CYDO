@@ -9,7 +9,7 @@ export function SectionHeading({ badge, title, subtitle, align = "center" }: Pro
   return (
     <div className={`mb-12 md:mb-16 ${align === "center" ? "text-center" : "text-left"} max-w-3xl ${align === "center" ? "mx-auto" : ""}`}>
       {badge && (
-        <span className="inline-block rounded-full bg-indigo-500/10 px-4 py-1.5 text-sm text-indigo-400 mb-4">
+        <span className="inline-block rounded-full bg-purple-500/10 px-4 py-1.5 text-sm text-purple-300 mb-4 border border-purple-500/20">
           {badge}
         </span>
       )}

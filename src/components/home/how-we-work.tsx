@@ -29,12 +29,12 @@ export function HowWeWork() {
               />
               
               <div className="mt-8 hidden lg:block relative">
-                <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-indigo-500/10 to-violet-500/10 blur-xl" />
+                <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-purple-500/10 to-pink-500/10 blur-xl" />
                 <div className="h-[280px] w-full rounded-2xl border border-white/5 bg-card/40 backdrop-blur-md flex items-center justify-center relative overflow-hidden shadow-2xl">
                   <div className="absolute inset-0 grid-pattern opacity-20" />
-                  <div className="absolute h-32 w-32 rounded-full bg-indigo-500/20 blur-3xl animate-pulse" />
+                  <div className="absolute h-32 w-32 rounded-full bg-purple-500/20 blur-3xl animate-pulse" />
                   <div className="relative flex flex-col items-center gap-4 text-center">
-                    <Rocket className="h-16 w-16 text-indigo-400" />
+                    <Rocket className="h-16 w-16 text-purple-400" />
                     <span className="text-sm font-medium tracking-widest text-muted-foreground uppercase">Iterative Process</span>
                   </div>
                 </div>
@@ -49,12 +49,12 @@ export function HowWeWork() {
                 <ScrollReveal key={stage.number} delay={0.1}>
                   <div className="relative">
                     {/* Timeline Node */}
-                    <div className="absolute -left-[51px] md:-left-[67px] top-0 flex h-12 w-12 items-center justify-center rounded-full border-4 border-background bg-indigo-500/10 text-indigo-400 shadow-sm transition-transform duration-500 hover:scale-110 hover:bg-indigo-500 hover:text-white">
+                    <div className="absolute -left-[51px] md:-left-[67px] top-0 flex h-12 w-12 items-center justify-center rounded-full border-4 border-background bg-purple-500/10 text-purple-400 shadow-sm transition-transform duration-500 hover:scale-110 hover:bg-purple-500 hover:text-white">
                       <stage.icon className="h-5 w-5" />
                     </div>
 
-                    <div className="group rounded-2xl border border-border/50 bg-card/30 p-8 pt-10 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-card/80 hover:shadow-xl hover:shadow-indigo-500/5 hover:border-indigo-500/30">
-                      <span className="absolute right-6 top-6 text-7xl font-black text-muted-foreground/5 transition-transform duration-500 group-hover:-translate-y-2 group-hover:text-indigo-500/10">
+                    <div className="group rounded-2xl border border-border/50 bg-card/30 p-8 pt-10 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-card/80 hover:shadow-xl hover:shadow-purple-500/5 hover:border-purple-500/30">
+                      <span className="absolute right-6 top-6 text-7xl font-black text-muted-foreground/5 transition-transform duration-500 group-hover:-translate-y-2 group-hover:text-purple-500/10">
                         {stage.number}
                       </span>
                       

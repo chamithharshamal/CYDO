@@ -13,7 +13,7 @@ function FloatingBadge({ children, className, delay = 0 }: { children: React.Rea
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1 + delay, duration: 0.8 }}
       className={cn(
-        "absolute z-40 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl shadow-2xl shadow-indigo-500/10",
+        "absolute z-40 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl shadow-2xl shadow-purple-500/10",
         className
       )}
     >
@@ -58,7 +58,7 @@ function MagnetButton({ children, href, primary = false }: { children: React.Rea
       className={cn(
         "inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm font-bold transition-all duration-300",
         primary 
-          ? "bg-indigo-600 text-white shadow-xl shadow-indigo-500/20 hover:bg-indigo-500 hover:scale-105" 
+          ? "bg-purple-600 text-white shadow-xl shadow-purple-500/20 hover:bg-purple-500 hover:scale-105" 
           : "bg-white/5 text-white border border-white/10 hover:bg-white/10 backdrop-blur-md"
       )}
     >
@@ -97,13 +97,13 @@ function TypewriterText({ texts }: { texts: string[] }) {
 
   return (
     <div className="flex items-center text-sm md:text-base font-bold bg-white/5 border border-white/10 px-4 py-2 rounded-full backdrop-blur-xl">
-      <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+      <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
         {displayText}
       </span>
       <motion.span
         animate={{ opacity: [1, 0] }}
         transition={{ duration: 0.5, repeat: Infinity }}
-        className="ml-1 h-4 w-[2px] bg-indigo-400"
+        className="ml-1 h-4 w-[2px] bg-purple-400"
       />
     </div>
   )
@@ -160,11 +160,11 @@ export function HeroRedesign() {
         {/* Dynamic Aura Blobs */}
         <motion.div 
           animate={{ x: mousePosition.x * 60, y: mousePosition.y * 60 }}
-          className="absolute -top-[10%] -left-[5%] h-[60vw] w-[60vw] rounded-full bg-indigo-600/10 blur-[140px]" 
+          className="absolute -top-[10%] -left-[5%] h-[60vw] w-[60vw] rounded-full bg-purple-600/10 blur-[140px]" 
         />
         <motion.div 
           animate={{ x: mousePosition.x * -40, y: mousePosition.y * -40 }}
-          className="absolute -bottom-[10%] -right-[5%] h-[60vw] w-[60vw] rounded-full bg-purple-600/10 blur-[140px]" 
+          className="absolute -bottom-[10%] -right-[5%] h-[60vw] w-[60vw] rounded-full bg-pink-600/10 blur-[140px]" 
         />
         
         {/* Grid Floor Overlay */}
@@ -186,8 +186,8 @@ export function HeroRedesign() {
         </FloatingBadge>
         <FloatingBadge className="top-1/3 right-[5%]" delay={0.4}>
           <div className="flex items-center gap-3">
-            <ShieldCheck className="h-5 w-5 text-indigo-400" />
-            <div className="text-left"><p className="text-xs font-bold text-white tracking-widest">SECURITY</p><p className="text-sm text-indigo-400/80">Enterprise</p></div>
+            <ShieldCheck className="h-5 w-5 text-purple-400" />
+            <div className="text-left"><p className="text-xs font-bold text-white tracking-widest">SECURITY</p><p className="text-sm text-purple-400/80">Enterprise</p></div>
           </div>
         </FloatingBadge>
         <FloatingBadge className="bottom-1/4 left-[8%]" delay={0.6}>
@@ -210,7 +210,7 @@ export function HeroRedesign() {
           className="text-balance text-5xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl"
         >
           Engineering <br />
-          <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent bg-[size:200%_auto] animate-gradient drop-shadow-[0_0_15px_rgba(99,102,241,0.5)]">
+          <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent bg-[size:200%_auto] animate-gradient drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]">
             The Next Frontier
           </span>
         </motion.h1>

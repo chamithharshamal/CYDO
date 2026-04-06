@@ -115,7 +115,7 @@ export default function ContactPage() {
                       />
                     </div>
 
-                    <Button type="submit" disabled={loading} className="w-full h-12 rounded-full bg-indigo-600 font-semibold text-white hover:bg-indigo-700 transition-all">
+                    <Button type="submit" disabled={loading} className="w-full h-12 rounded-full bg-purple-600 font-semibold text-white hover:bg-purple-700 transition-all">
                       {loading ? "Sending..." : "Send Message"}
                     </Button>
                   </form>
@@ -129,8 +129,8 @@ export default function ContactPage() {
             <Card className="h-full relative overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm shadow-xl">
 
               {/* Background glow for the contact info card */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-[80px] pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-violet-500/10 rounded-full blur-[80px] pointer-events-none" />
+              <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-[80px] pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-pink-500/10 rounded-full blur-[80px] pointer-events-none" />
               
               <CardContent className="flex flex-col h-full p-8 md:p-10 relative z-10">
                 <h3 className="text-2xl font-semibold text-foreground mb-8">Contact Information</h3>
@@ -144,13 +144,13 @@ export default function ContactPage() {
                     { icon: MapPin, label: "Address", value: "123 Galle Road, Colombo 03, Sri Lanka", href: null, colSpan: "sm:col-span-2 lg:col-span-1 xl:col-span-2" },
                   ].map((info) => (
                     <div key={info.label} className={`flex items-start gap-4 ${info.colSpan || ''}`}>
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-indigo-500/10 text-indigo-400">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-purple-500/10 text-purple-400">
                         <info.icon className="h-5 w-5" />
                       </div>
                       <div>
                         <p className="font-medium text-foreground">{info.label}</p>
                         {info.href ? (
-                          <a href={info.href} target={info.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="mt-1 block text-sm text-muted-foreground hover:text-indigo-400 transition-colors">
+                          <a href={info.href} target={info.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="mt-1 block text-sm text-muted-foreground hover:text-purple-400 transition-colors">
                             {info.value}
                           </a>
                         ) : (
@@ -169,7 +169,7 @@ export default function ContactPage() {
                       { icon: LinkedinIcon, href: "https://linkedin.com", label: "LinkedIn", hover: "hover:bg-[#0A66C2] hover:text-white hover:border-[#0A66C2]" },
                       { icon: XIcon, href: "https://twitter.com", label: "X", hover: "hover:bg-white hover:text-black hover:border-white" },
                       { icon: GithubIcon, href: "https://github.com", label: "GitHub", hover: "hover:bg-[#333] hover:text-white hover:border-[#333]" },
-                      { icon: InstagramIcon, href: "https://instagram.com", label: "Instagram", hover: "hover:bg-gradient-to-tr hover:from-[#fd5949] hover:to-[#d6249f] hover:text-white hover:border-transparent" },
+                      { icon: InstagramIcon, href: "https://instagram.com", label: "Instagram", hover: "hover:bg-gradient-to-tr hover:from-purple-500 hover:to-pink-500 hover:text-white hover:border-transparent" },
                     ].map((social) => (
                       <a
                         key={social.label}

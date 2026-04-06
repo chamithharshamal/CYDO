@@ -45,13 +45,13 @@ export default async function CaseStudyPage({ params }: Props) {
               Back to Portfolio
             </Link>
 
-            <Badge className="bg-indigo-500/10 text-indigo-400">{project.category}</Badge>
+            <Badge className="bg-purple-500/10 text-purple-400">{project.category}</Badge>
             <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">{project.title}</h1>
             <p className="mt-4 text-lg text-muted-foreground">{project.description}</p>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <div className="mt-8 aspect-video overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-indigo-500/10 to-violet-500/10 flex items-center justify-center">
+            <div className="mt-8 aspect-video overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-purple-500/10 to-pink-500/10 flex items-center justify-center">
               <span className="text-xl font-medium text-white/30">{project.title}</span>
             </div>
           </ScrollReveal>
@@ -96,7 +96,7 @@ export default async function CaseStudyPage({ params }: Props) {
                   {project.results.map((result) => (
                     <Card key={result.label} className="border-border bg-card text-center">
                       <CardContent className="p-6">
-                        <p className="text-3xl font-bold text-indigo-400">{result.metric}</p>
+                        <p className="text-3xl font-bold text-purple-400">{result.metric}</p>
                         <p className="mt-2 text-sm text-muted-foreground">{result.label}</p>
                       </CardContent>
                     </Card>
@@ -120,7 +120,7 @@ export default async function CaseStudyPage({ params }: Props) {
               <ScrollReveal>
                 <Card className="border-border bg-card">
                   <CardContent className="p-8">
-                    <Quote className="h-8 w-8 text-indigo-500/20" />
+                    <Quote className="h-8 w-8 text-purple-500/20" />
                     <p className="mt-4 text-base italic leading-relaxed text-muted-foreground">
                       &ldquo;{project.testimonial.text}&rdquo;
                     </p>
@@ -151,10 +151,10 @@ export default async function CaseStudyPage({ params }: Props) {
           </ScrollReveal>
 
           <ScrollReveal>
-            <div className="mt-16 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 p-12 text-center">
+            <div className="mt-16 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 p-12 text-center">
               <h2 className="text-2xl font-bold text-white">Start Your Project</h2>
-              <p className="mt-2 text-indigo-100">Let&apos;s build something amazing together.</p>
-              <Link href="/contact" className="mt-6 inline-flex h-9 items-center justify-center rounded-full bg-white px-8 text-sm font-medium text-indigo-700 transition-colors hover:bg-gray-100">
+              <p className="mt-2 text-purple-100">Let&apos;s build something amazing together.</p>
+              <Link href="/contact" className="mt-6 inline-flex h-9 items-center justify-center rounded-full bg-white px-8 text-sm font-medium text-purple-700 transition-colors hover:bg-gray-100">
                 Get in Touch
               </Link>
             </div>

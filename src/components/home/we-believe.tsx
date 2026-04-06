@@ -14,7 +14,7 @@ export function WeBelieve() {
           <div className="order-2 lg:order-1">
             <ScrollReveal>
               <div className="inline-flex items-center space-x-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-1.5 mb-6">
-                <span className="h-2 w-2 rounded-full bg-purple-500 animate-pulse" />
+                
                 <span className="text-sm font-medium tracking-wide text-purple-300">
                   Our Philosophy
                 </span>

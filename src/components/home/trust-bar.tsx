@@ -20,8 +20,8 @@ export function TrustBar() {
             <div key={i} className="flex items-center gap-4">
               {i > 0 && <Separator orientation="vertical" className="hidden h-10 md:block" />}
               <div className="flex items-center gap-3 px-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10">
-                  <item.icon className="h-5 w-5 text-indigo-400" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/10">
+                  <item.icon className="h-5 w-5 text-purple-400" />
                 </div>
                 <div>
                   <p className="text-sm font-semibold">{item.value}</p>

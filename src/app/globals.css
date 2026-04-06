@@ -55,21 +55,21 @@
   --card-foreground: #fafafa;
   --popover: #0f0f12;
   --popover-foreground: #fafafa;
-  --primary: #6366f1;
+  --primary: #a855f7;
   --primary-foreground: #ffffff;
   --secondary: #1c1c1e;
   --secondary-foreground: #fafafa;
   --muted: #27272a;
   --muted-foreground: #a1a1aa;
-  --accent: #818cf8;
+  --accent: #d946ef;
   --accent-foreground: #fafafa;
   --destructive: #ef4444;
   --border: #27272a;
   --input: #27272a;
   --ring: #6366f1;
-  --chart-1: #6366f1;
-  --chart-2: #818cf8;
-  --chart-3: #a5b4fc;
+  --chart-1: #a855f7;
+  --chart-2: #d946ef;
+  --chart-3: #f472b6;
   --chart-4: #8b5cf6;
   --chart-5: #7c3aed;
   --radius: 0.75rem;
@@ -97,7 +97,7 @@
 
 @layer utilities {
   .gradient-text {
-    background: linear-gradient(to right, #6366f1, #a855f7, #8b5cf6);
+    background: linear-gradient(to right, #a855f7, #ec4899, #d946ef);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -106,27 +106,27 @@
   .hero-gradient {
     background: radial-gradient(
       ellipse 80% 50% at 50% -20%,
-      rgba(99, 102, 241, 0.15),
+      rgba(168, 85, 247, 0.15),
       transparent
     );
   }
 
   .glow-border {
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
   }
 
   .grid-pattern {
     background-image: repeating-linear-gradient(
         0deg,
-        rgba(99, 102, 241, 0.03) 0px,
-        rgba(99, 102, 241, 0.03) 1px,
+        rgba(168, 85, 247, 0.03) 0px,
+        rgba(168, 85, 247, 0.03) 1px,
         transparent 1px,
         transparent 60px
       ),
       repeating-linear-gradient(
         90deg,
-        rgba(99, 102, 241, 0.03) 0px,
-        rgba(99, 102, 241, 0.03) 1px,
+        rgba(168, 85, 247, 0.03) 0px,
+        rgba(168, 85, 247, 0.03) 1px,
         transparent 1px,
         transparent 60px
       );

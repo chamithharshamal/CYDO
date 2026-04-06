@@ -6,7 +6,7 @@ import { stats } from "@/data/stats"
 
 export function Stats() {
   return (
-    <section className="bg-gradient-to-br from-indigo-950/50 to-violet-950/30 py-20 md:py-28">
+    <section className="bg-gradient-to-br from-purple-950/50 to-pink-950/30 py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <ScrollReveal>
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">

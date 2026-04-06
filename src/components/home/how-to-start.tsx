@@ -12,24 +12,24 @@ const steps = [
     icon: MessageSquare, 
     title: "Share Your Vision", 
     description: "Start with a conversation. We dive deep into your project's soul, understanding every nuance of your business goals and technical needs. No generic forms—just humans talking about elite engineering.",
-    color: "from-blue-500/20 to-indigo-500/20",
-    glow: "bg-blue-500/5"
+    color: "from-purple-500/20 to-pink-500/20",
+    glow: "bg-purple-500/5"
   },
   { 
     number: "02", 
     icon: FileText, 
     title: "The Blueprint", 
     description: "Our architects draft a comprehensive roadmap. You'll receive a transparent, battle-tested plan covering architecture, tech stack choice, and a milestone-driven timeline. Precision from the start.",
-    color: "from-indigo-500/20 to-violet-500/20",
-    glow: "bg-indigo-500/5"
+    color: "from-purple-600/20 to-pink-600/20",
+    glow: "bg-purple-600/5"
   },
   { 
     number: "03", 
     icon: Wrench, 
     title: "Elite Engineering", 
     description: "Our team iterates in high-frequency sprints. We don't just write code; we engineer value. You see progress in real-time on our staging environments. Continuous integration meets absolute quality.",
-    color: "from-violet-500/20 to-purple-500/20",
-    glow: "bg-violet-500/5"
+    color: "from-pink-500/20 to-purple-500/20",
+    glow: "bg-pink-500/5"
   },
   { 
     number: "04", 
@@ -76,16 +76,16 @@ function StepCard({ step, isEven }: { step: any, isEven: boolean }) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-      className={`p-6 rounded-2xl border border-white/5 bg-white/[0.01] backdrop-blur-xl transition-colors duration-700 hover:border-indigo-500/20 group relative overflow-hidden shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] ${!isEven && 'md:text-right'}`}
+      className={`p-6 rounded-2xl border border-white/5 bg-white/[0.01] backdrop-blur-xl transition-colors duration-700 hover:border-purple-500/20 group relative overflow-hidden shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] ${!isEven && 'md:text-right'}`}
     >
       {/* Inner Glow */}
       <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none ${step.glow}`} />
       
       {/* Scanning Line */}
-      <div className="absolute top-0 left-0 right-0 h-[100px] bg-gradient-to-b from-transparent via-indigo-500/10 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-y-[400px] transition-all duration-1000 ease-linear pointer-events-none -translate-y-[100px]" />
+      <div className="absolute top-0 left-0 right-0 h-[100px] bg-gradient-to-b from-transparent via-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-y-[400px] transition-all duration-1000 ease-linear pointer-events-none -translate-y-[100px]" />
 
       <div style={{ transform: "translateZ(30px)" }}>
-        <h3 className="text-xl font-black tracking-tight text-white mb-3 group-hover:text-indigo-400 transition-colors">
+        <h3 className="text-xl font-black tracking-tight text-white mb-3 group-hover:text-purple-400 transition-colors">
           {step.title}
         </h3>
       </div>
@@ -95,9 +95,9 @@ function StepCard({ step, isEven }: { step: any, isEven: boolean }) {
         </p>
       </div>
       
-      <div style={{ transform: "translateZ(40px)" }} className={`mt-4 inline-flex items-center gap-2 text-[10px] font-bold text-indigo-400 tracking-wider uppercase ${!isEven && 'md:flex-row-reverse'}`}>
+      <div style={{ transform: "translateZ(40px)" }} className={`mt-4 inline-flex items-center gap-2 text-[10px] font-bold text-purple-400 tracking-wider uppercase ${!isEven && 'md:flex-row-reverse'}`}>
         <span>Phase {step.number}</span>
-        <div className="h-px w-6 bg-indigo-500/30" />
+        <div className="h-px w-6 bg-purple-500/30" />
       </div>
     </motion.div>
   )
@@ -133,17 +133,17 @@ function MagneticOrb({ icon: Icon }: { icon: any }) {
       <motion.div 
         animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
         transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-        className="absolute inset-4 bg-indigo-500/30 rounded-full blur-[20px] pointer-events-none"
+        className="absolute inset-4 bg-purple-500/30 rounded-full blur-[20px] pointer-events-none"
       />
       
       <motion.div 
         style={{ x: mouseXSpring, y: mouseYSpring }}
-        className={`flex h-16 w-16 items-center justify-center rounded-full border border-white/10 bg-zinc-900/80 backdrop-blur-3xl shadow-[inset_0_0_20px_rgba(255,255,255,0.05),0_10px_40px_rgba(0,0,0,0.5)] transition-colors duration-700 hover:border-indigo-500 group cursor-pointer z-10 relative`}
+        className={`flex h-16 w-16 items-center justify-center rounded-full border border-white/10 bg-zinc-900/80 backdrop-blur-3xl shadow-[inset_0_0_20px_rgba(255,255,255,0.05),0_10px_40px_rgba(0,0,0,0.5)] transition-colors duration-700 hover:border-purple-500 group cursor-pointer z-10 relative`}
       >
         <Icon className="h-7 w-7 text-white transition-transform duration-500 group-hover:scale-110" />
         
         {/* Inner Energy Core */}
-        <div className="absolute inset-1.5 rounded-full border border-indigo-500/20 animate-pulse pointer-events-none" />
+        <div className="absolute inset-1.5 rounded-full border border-purple-500/20 animate-pulse pointer-events-none" />
       </motion.div>
     </div>
   )
@@ -163,8 +163,8 @@ export function HowToStart() {
   return (
     <section ref={containerRef} className="py-20 md:py-28 relative overflow-hidden bg-zinc-950/20">
       {/* Background Neural Glows */}
-      <div className="absolute top-1/4 -left-24 w-[400px] h-[400px] bg-indigo-600/5 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-24 w-[400px] h-[400px] bg-violet-600/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/4 -left-24 w-[400px] h-[400px] bg-purple-600/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-24 w-[400px] h-[400px] bg-pink-600/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 relative z-10">
         <SectionHeading
@@ -176,9 +176,9 @@ export function HowToStart() {
         <div className="mt-16 md:mt-20 relative">
           {/* Central Animated Line (Desktop) */}
           <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-white/[0.03] -translate-x-1/2 hidden md:block overflow-hidden rounded-full">
-            <motion.div 
+              <motion.div 
               style={{ scaleY: pathLength }}
-              className="w-full h-full bg-gradient-to-b from-indigo-500 to-violet-500 origin-top shadow-[0_0_15px_rgba(99,102,241,0.5)]"
+              className="w-full h-full bg-gradient-to-b from-purple-500 to-pink-500 origin-top shadow-[0_0_15px_rgba(168,85,247,0.5)]"
             />
             {/* Tracer particle */}
             <motion.div
@@ -229,7 +229,7 @@ export function HowToStart() {
              <motion.div 
                animate={{ y: [0, 8, 0] }}
                transition={{ repeat: Infinity, duration: 2 }}
-               className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 shadow-[0_0_15px_rgba(99,102,241,0.2)] hover:bg-indigo-500/20 transition-colors"
+               className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 shadow-[0_0_15px_rgba(168,85,247,0.2)] hover:bg-purple-500/20 transition-colors"
              >
                 <ChevronDown className="h-5 w-5" />
              </motion.div>

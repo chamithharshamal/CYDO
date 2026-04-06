@@ -82,10 +82,10 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((value, i) => (
               <ScrollReveal key={value.title} delay={i * 0.1}>
-                <Card className="group h-full border-border/50 bg-card text-center transition-all duration-300 hover:-translate-y-1 hover:border-indigo-500/30 hover:shadow-lg hover:shadow-indigo-500/5">
+                <Card className="group h-full border-border/50 bg-card text-center transition-all duration-300 hover:-translate-y-1 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/5">
                   <CardContent className="p-8">
-                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-500/10 border border-indigo-500/20 transition-colors group-hover:bg-indigo-500/20">
-                      <value.icon className="h-7 w-7 text-indigo-400" />
+                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-500/10 border border-purple-500/20 transition-colors group-hover:bg-purple-500/20">
+                      <value.icon className="h-7 w-7 text-purple-400" />
                     </div>
                     <h3 className="mt-4 text-lg font-semibold">{value.title}</h3>
                     <p className="mt-2 text-sm text-muted-foreground">{value.description}</p>
@@ -104,13 +104,13 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {team.map((member, i) => (
               <ScrollReveal key={member.name} delay={i * 0.1}>
-                <Card className="group h-full border-border/50 bg-card text-center transition-all duration-300 hover:-translate-y-1 hover:border-indigo-500/30">
+                <Card className="group h-full border-border/50 bg-card text-center transition-all duration-300 hover:-translate-y-1 hover:border-purple-500/30">
                   <CardContent className="p-8">
-                    <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500/20 to-violet-500/20 text-2xl font-bold text-indigo-400 border border-indigo-500/20 transition-all group-hover:shadow-lg group-hover:shadow-indigo-500/10">
+                    <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 text-2xl font-bold text-purple-400 border border-purple-500/20 transition-all group-hover:shadow-lg group-hover:shadow-purple-500/10">
                       {member.name.split(" ").map((n) => n[0]).join("")}
                     </div>
                     <h3 className="mt-4 text-lg font-semibold">{member.name}</h3>
-                    <p className="text-sm text-indigo-400">{member.role}</p>
+                    <p className="text-sm text-purple-400">{member.role}</p>
                     <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{member.bio}</p>
                     <div className="mt-4 flex justify-center gap-2">
                       {Object.entries({ linkedin: member.linkedin, twitter: member.twitter, github: member.github }).map(
@@ -122,7 +122,7 @@ export default function AboutPage() {
                               href={url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex h-8 w-8 items-center justify-center rounded-lg border border-border/50 text-muted-foreground transition-colors hover:border-indigo-500/50 hover:text-indigo-400 hover:bg-indigo-500/5"
+                              className="flex h-8 w-8 items-center justify-center rounded-lg border border-border/50 text-muted-foreground transition-colors hover:border-purple-500/50 hover:text-purple-400 hover:bg-purple-500/5"
                             >
                               <Icon className="h-3.5 w-3.5" />
                             </a>
@@ -161,14 +161,14 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <ScrollReveal>
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-indigo-600 to-violet-600 p-12 text-center md:p-16">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-600 to-pink-600 p-12 text-center md:p-16">
               <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-white/10 blur-3xl" />
               <div className="absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-white/10 blur-3xl" />
               <div className="relative">
                 <h2 className="text-3xl font-bold text-white md:text-4xl">Want to Join Our Team?</h2>
-                <p className="mt-4 text-lg text-indigo-100">We&apos;re always looking for talented people who share our passion for technology.</p>
+                <p className="mt-4 text-lg text-purple-100">We&apos;re always looking for talented people who share our passion for technology.</p>
                 <div className="mt-8">
-                  <Link href="/contact" className="inline-flex h-12 items-center rounded-full bg-white px-8 text-base font-semibold text-indigo-700 transition-all hover:bg-gray-100 hover:shadow-xl hover:shadow-white/20">
+                  <Link href="/contact" className="inline-flex h-12 items-center rounded-full bg-white px-8 text-base font-semibold text-purple-700 transition-all hover:bg-gray-100 hover:shadow-xl hover:shadow-white/20">
                     Get in Touch
                   </Link>
                 </div>

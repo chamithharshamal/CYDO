@@ -42,7 +42,7 @@ export function Navbar() {
           animate={{ y: 0, opacity: 1 }}
           className={cn(
             "pointer-events-auto relative flex items-center justify-between rounded-full border border-white/10 bg-zinc-950/80 px-4 py-2.5 backdrop-blur-2xl transition-all duration-500 md:px-8 md:py-3",
-            isScrolled ? "w-full max-w-4xl shadow-2xl shadow-indigo-500/10" : "w-full max-w-7xl border-white/5 bg-zinc-950/40 shadow-none"
+            isScrolled ? "w-full max-w-4xl shadow-2xl shadow-purple-500/10" : "w-full max-w-7xl border-white/5 bg-zinc-950/40 shadow-none"
           )}
         >
           {/* Logo */}
@@ -81,7 +81,7 @@ export function Navbar() {
                 {pathname === link.href && (
                   <motion.span 
                     layoutId="navbar-active"
-                    className="absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-indigo-500"
+                    className="absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-purple-500"
                   />
                 )}
               </Link>
@@ -93,8 +93,8 @@ export function Navbar() {
             <Link 
               href="/contact" 
               className={cn(
-                "hidden items-center gap-2 rounded-full bg-indigo-600 px-5 py-2 text-sm font-bold text-white transition-all hover:bg-indigo-500 hover:scale-105 active:scale-95 md:flex",
-                isScrolled ? "shadow-lg shadow-indigo-500/20" : ""
+                "hidden items-center gap-2 rounded-full bg-purple-600 px-5 py-2 text-sm font-bold text-white transition-all hover:bg-purple-500 hover:scale-105 active:scale-95 md:flex",
+                isScrolled ? "shadow-lg shadow-purple-500/20" : ""
               )}
             >
               Get in Touch
@@ -133,7 +133,7 @@ export function Navbar() {
                     href={link.href}
                     className={cn(
                       "text-4xl font-black tracking-tight transition-colors",
-                      pathname === link.href ? "text-indigo-400" : "text-white/60 hover:text-white"
+                      pathname === link.href ? "text-purple-400" : "text-white/60 hover:text-white"
                     )}
                   >
                     {link.label}
@@ -149,7 +149,7 @@ export function Navbar() {
               >
                 <Link
                   href="/contact"
-                  className="flex w-full items-center justify-between rounded-2xl bg-indigo-600 p-6 text-xl font-bold text-white"
+                  className="flex w-full items-center justify-between rounded-2xl bg-purple-600 p-6 text-xl font-bold text-white"
                 >
                   Start Your Project
                   <ArrowRight className="h-6 w-6" />

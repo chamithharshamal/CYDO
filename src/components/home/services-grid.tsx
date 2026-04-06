@@ -61,7 +61,7 @@ function SpotlightCard({ service, index, span }: { service: any, index: number, 
         className="group relative h-full transition-all duration-500 will-change-transform"
       >
         <Card 
-          className="relative h-full overflow-hidden border-white/5 bg-white/[0.01] backdrop-blur-3xl transition-all duration-500 group-hover:border-indigo-500/40 group-hover:bg-white/[0.02] group-hover:shadow-[0_0_30px_rgba(99,102,241,0.1)]"
+          className="relative h-full overflow-hidden border-white/5 bg-white/[0.01] backdrop-blur-3xl transition-all duration-500 group-hover:border-purple-500/40 group-hover:bg-white/[0.02] group-hover:shadow-[0_0_30px_rgba(168,85,247,0.1)]"
           style={{ transformStyle: "preserve-3d" }}
         >
           {/* Spotlight Effect - now follows surface */}
@@ -71,7 +71,7 @@ function SpotlightCard({ service, index, span }: { service: any, index: number, 
               background: useMotionTemplate`
                 radial-gradient(
                   600px circle at ${(xSpring.get() + 0.5) * 100}% ${(ySpring.get() + 0.5) * 100}%,
-                  rgba(99, 102, 241, 0.15),
+                  rgba(168, 85, 247, 0.15),
                   transparent 80%
                 )
               `,
@@ -100,7 +100,7 @@ function SpotlightCard({ service, index, span }: { service: any, index: number, 
           <CardContent className="relative z-20 flex h-full flex-col justify-between p-5" style={{ transformStyle: "preserve-3d" }}>
             <div style={{ transform: "translateZ(40px)" }}>
               <div className="flex items-center justify-between mb-3" style={{ transform: "translateZ(50px)" }}>
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400 backdrop-blur-2xl transition-all duration-500 group-hover:bg-indigo-500 group-hover:text-white group-hover:rotate-[360deg] group-hover:scale-110">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/10 text-purple-400 backdrop-blur-2xl transition-all duration-500 group-hover:bg-purple-500 group-hover:text-white group-hover:rotate-[360deg] group-hover:scale-110">
                   <service.icon className="h-5 w-5" />
                 </div>
                 <span className="text-3xl font-black tracking-tighter text-white/[0.02] group-hover:text-white/[0.05] transition-colors">
@@ -108,10 +108,10 @@ function SpotlightCard({ service, index, span }: { service: any, index: number, 
                 </span>
               </div>
 
-              <h3 className="text-lg font-black tracking-tight text-white mb-1.5 md:text-xl group-hover:text-indigo-400 transition-colors" style={{ transform: "translateZ(30px)" }}>
+              <h3 className="text-lg font-black tracking-tight text-white mb-1.5 md:text-xl group-hover:text-purple-400 transition-colors" style={{ transform: "translateZ(30px)" }}>
                 {service.title}
                 {isAI && (
-                  <span className="ml-2 inline-flex items-center rounded-full bg-indigo-500/10 px-2 py-0.5 text-[8px] font-bold text-indigo-400 border border-indigo-500/20">
+                  <span className="ml-2 inline-flex items-center rounded-full bg-purple-500/10 px-2 py-0.5 text-[8px] font-bold text-purple-400 border border-purple-500/20">
                     NEW
                   </span>
                 )}
@@ -123,7 +123,7 @@ function SpotlightCard({ service, index, span }: { service: any, index: number, 
               <ul className="space-y-1 mb-3" style={{ transform: "translateZ(20px)" }}>
                 {service.features.slice(0, 2).map((feature: string) => (
                   <li key={feature} className="flex items-center gap-2 text-[10px] text-white/40 font-medium group-hover:text-white/60 transition-colors">
-                    <CheckCircle2 className="h-3 w-3 text-indigo-500/50 group-hover:text-indigo-400" />
+                    <CheckCircle2 className="h-3 w-3 text-purple-500/50 group-hover:text-purple-400" />
                     {feature}
                   </li>
                 ))}
@@ -153,7 +153,7 @@ function SpotlightCard({ service, index, span }: { service: any, index: number, 
 
               <Link
                 href={`/services#${service.id}`}
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white shadow-xl transition-all duration-300 hover:bg-indigo-600 hover:border-indigo-400 hover:scale-110"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white shadow-xl transition-all duration-300 hover:bg-purple-600 hover:border-purple-400 hover:scale-110"
               >
                 <ArrowRight className="h-4 w-4" />
               </Link>
@@ -161,7 +161,7 @@ function SpotlightCard({ service, index, span }: { service: any, index: number, 
           </CardContent>
           
           {/* Border Flash on Hover */}
-          <div className="absolute inset-0 z-30 pointer-events-none rounded-xl border border-white/0 transition-all duration-700 group-hover:border-indigo-500/20 group-hover:bg-indigo-500/[0.01]" />
+          <div className="absolute inset-0 z-30 pointer-events-none rounded-xl border border-white/0 transition-all duration-700 group-hover:border-purple-500/20 group-hover:bg-purple-500/[0.01]" />
         </Card>
       </motion.div>
     </ScrollReveal>
@@ -188,8 +188,8 @@ export function ServicesGrid() {
   return (
     <section className="py-16 md:py-20 relative overflow-hidden" id="services">
       {/* Background Decor */}
-      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-indigo-600/5 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-1/4 -left-20 w-[400px] h-[400px] bg-purple-600/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-1/4 -left-20 w-[400px] h-[400px] bg-pink-600/5 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="mx-auto max-w-5xl px-4 md:px-6 lg:px-8">
         <SectionHeading
@@ -218,7 +218,7 @@ export function ServicesGrid() {
               View All Solutions
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </span>
-            <div className="absolute inset-0 z-0 bg-gradient-to-r from-indigo-500 to-purple-600 opacity-0 transition-opacity duration-300 group-hover:opacity-20" />
+            <div className="absolute inset-0 z-0 bg-gradient-to-r from-purple-500 to-pink-600 opacity-0 transition-opacity duration-300 group-hover:opacity-20" />
           </Link>
         </div>
       </div>

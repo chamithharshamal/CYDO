@@ -32,7 +32,7 @@ export function FeaturedWork() {
           {featured.map((project, i) => (
             <ScrollReveal key={project.slug} delay={i * 0.15} direction={i % 2 === 0 ? "left" : "right"}>
               <Link href={`/portfolio/${project.slug}`}>
-                <Card className="group h-full overflow-hidden border-border/50 bg-card transition-all duration-300 hover:-translate-y-2 hover:border-indigo-500/50 hover:shadow-xl hover:shadow-indigo-500/5">
+                <Card className="group h-full overflow-hidden border-border/50 bg-card transition-all duration-300 hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/5">
                   <div className="relative aspect-video overflow-hidden">
                     {projectImages[project.slug] ? (
                       <Image
@@ -43,7 +43,7 @@ export function FeaturedWork() {
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                     ) : (
-                      <div className="h-full w-full bg-gradient-to-br from-indigo-600/20 to-violet-600/20 flex items-center justify-center">
+                      <div className="h-full w-full bg-gradient-to-br from-purple-600/20 to-pink-600/20 flex items-center justify-center">
                         <span className="text-lg font-semibold text-white/60">{project.title}</span>
                       </div>
                     )}
@@ -54,7 +54,7 @@ export function FeaturedWork() {
                     </div>
                   </div>
                   <CardContent className="p-6">
-                    <Badge className="bg-indigo-500/10 text-indigo-400 hover:bg-indigo-500/20">
+                    <Badge className="bg-purple-500/10 text-purple-400 hover:bg-purple-500/20">
                       {project.category}
                     </Badge>
                     <h3 className="mt-3 text-lg font-semibold">{project.title}</h3>
@@ -62,7 +62,7 @@ export function FeaturedWork() {
                       {project.description}
                     </p>
                     {project.testimonial && (
-                      <p className="mt-4 border-l-2 border-indigo-500/30 pl-3 text-xs italic text-muted-foreground">
+                      <p className="mt-4 border-l-2 border-purple-500/30 pl-3 text-xs italic text-muted-foreground">
                         &ldquo;{project.testimonial.text.substring(0, 80)}...&rdquo;
                         <br />
                         <span className="not-italic font-medium text-foreground/70">— {project.testimonial.author}</span>
@@ -86,7 +86,7 @@ export function FeaturedWork() {
         </div>
 
         <div className="mt-12 text-center">
-          <Link href="/portfolio" className={buttonVariants({ variant: "outline", className: "rounded-full border-border/60 px-8 hover:bg-white/5 hover:border-indigo-500/40" })}>
+          <Link href="/portfolio" className={buttonVariants({ variant: "outline", className: "rounded-full border-border/60 px-8 hover:bg-white/5 hover:border-purple-500/40" })}>
             View All Projects →
           </Link>
         </div>

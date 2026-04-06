@@ -22,8 +22,8 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative overflow-hidden border-b border-border bg-gradient-to-b from-indigo-950/30 to-transparent py-20 md:py-28 lg:py-32">
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-indigo-600/8 blur-[120px]" />
+      <section className="relative overflow-hidden border-b border-border bg-gradient-to-b from-purple-950/30 to-transparent py-20 md:py-28 lg:py-32">
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-purple-600/8 blur-[120px]" />
         <div className="relative mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading
             badge="What We Offer"
@@ -46,8 +46,8 @@ export default function ServicesPage() {
                 >
                   <div className="flex-1 space-y-6">
                     <div className="flex items-center gap-4">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-500/10 border border-indigo-500/20">
-                        <service.icon className="h-7 w-7 text-indigo-400" />
+                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-500/10 border border-purple-500/20">
+                        <service.icon className="h-7 w-7 text-purple-400" />
                       </div>
                       <span className="text-6xl font-bold text-muted-foreground/8">{service.number}</span>
                     </div>
@@ -58,8 +58,8 @@ export default function ServicesPage() {
                     <ul className="space-y-3">
                       {service.features.map((feature) => (
                         <li key={feature} className="flex items-center gap-3 text-sm">
-                          <div className="flex h-5 w-5 items-center justify-center rounded-full bg-indigo-500/10">
-                            <Check className="h-3 w-3 text-indigo-400" />
+                          <div className="flex h-5 w-5 items-center justify-center rounded-full bg-purple-500/10">
+                            <Check className="h-3 w-3 text-purple-400" />
                           </div>
                           {feature}
                         </li>
@@ -76,7 +76,7 @@ export default function ServicesPage() {
                   </div>
 
                   <div className="flex-1">
-                    <div className="group relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-indigo-500/5">
+                    <div className="group relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-purple-500/5">
                       {serviceImages[service.id] ? (
                         <Image
                           src={serviceImages[service.id]}
@@ -86,8 +86,8 @@ export default function ServicesPage() {
                           className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       ) : (
-                        <div className="aspect-[4/3] bg-gradient-to-br from-indigo-500/10 to-violet-500/10 flex items-center justify-center">
-                          <service.icon className="h-20 w-20 text-indigo-500/20" />
+                        <div className="aspect-[4/3] bg-gradient-to-br from-purple-500/10 to-pink-500/10 flex items-center justify-center">
+                          <service.icon className="h-20 w-20 text-purple-500/20" />
                         </div>
                       )}
                       {/* Gradient overlay */}
