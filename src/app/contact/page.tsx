@@ -86,38 +86,21 @@ export default function ContactPage() {
                       <Input id="company" name="company" placeholder="Your company name" className="bg-background/50 border-border" />
                     </div>
 
-                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                      <div className="space-y-2">
-                        <Label htmlFor="projectType">Project Type</Label>
-                        <Select name="projectType">
-                          <SelectTrigger className="bg-background/50 border-border">
-                            <SelectValue placeholder="Select type" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="web">Web Development</SelectItem>
-                            <SelectItem value="mobile">Mobile App</SelectItem>
-                            <SelectItem value="cloud">Cloud Solutions</SelectItem>
-                            <SelectItem value="design">UI/UX Design</SelectItem>
-                            <SelectItem value="consulting">IT Consulting</SelectItem>
-                            <SelectItem value="other">Other</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="budget">Budget Range</Label>
-                        <Select name="budget">
-                          <SelectTrigger className="bg-background/50 border-border">
-                            <SelectValue placeholder="Select range" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="5k-10k">$5K - $10K</SelectItem>
-                            <SelectItem value="10k-25k">$10K - $25K</SelectItem>
-                            <SelectItem value="25k-50k">$25K - $50K</SelectItem>
-                            <SelectItem value="50k-100k">$50K - $100K</SelectItem>
-                            <SelectItem value="100k+">$100K+</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="projectType">Project Type</Label>
+                      <Select name="projectType">
+                        <SelectTrigger className="bg-background/50 border-border">
+                          <SelectValue placeholder="Select type" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="web">Web Development</SelectItem>
+                          <SelectItem value="mobile">Mobile App</SelectItem>
+                          <SelectItem value="cloud">Cloud Solutions</SelectItem>
+                          <SelectItem value="design">UI/UX Design</SelectItem>
+                          <SelectItem value="consulting">IT Consulting</SelectItem>
+                          <SelectItem value="other">Other</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
 
                     <div className="space-y-2">

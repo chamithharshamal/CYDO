@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
 import { LinkedinIcon, XIcon, GithubIcon, InstagramIcon } from "@/components/shared/social-icons"
 import { Separator } from "@/components/ui/separator"
@@ -34,9 +35,14 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 md:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
-            <Link href="/" className="flex items-center text-xl font-bold">
-              <span className="text-indigo-500">CY</span>
-              <span className="text-foreground">DO</span>
+            <Link href="/" className="flex items-center">
+              <Image 
+                src="/images/branding/logo.jpg" 
+                alt="CYDO Logo" 
+                width={120} 
+                height={40} 
+                className="h-8 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm font-medium text-muted-foreground">Engineering Digital Excellence</p>
             <p className="text-sm text-muted-foreground leading-relaxed">

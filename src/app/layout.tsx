@@ -5,6 +5,7 @@ import { AnnouncementBar } from "@/components/layout/announcement-bar"
 import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
 import { FloatingWhatsApp } from "@/components/shared/floating-whatsapp"
+import { Chatbot } from "@/components/shared/chatbot"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -39,11 +40,11 @@ export default function RootLayout({
         <meta name="theme-color" content="#09090b" />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
-        <AnnouncementBar />
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />
         <FloatingWhatsApp />
+        <Chatbot />
       </body>
     </html>
   )

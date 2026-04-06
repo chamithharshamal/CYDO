@@ -40,6 +40,7 @@ export function FeaturedWork() {
                         alt={project.title}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                     ) : (
                       <div className="h-full w-full bg-gradient-to-br from-indigo-600/20 to-violet-600/20 flex items-center justify-center">

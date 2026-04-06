@@ -101,7 +101,7 @@ export default function AboutPage() {
       <section className="py-20 md:py-28 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading title="Meet the Team" subtitle="The talented people behind CYDO" />
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {team.map((member, i) => (
               <ScrollReveal key={member.name} delay={i * 0.1}>
                 <Card className="group h-full border-border/50 bg-card text-center transition-all duration-300 hover:-translate-y-1 hover:border-indigo-500/30">

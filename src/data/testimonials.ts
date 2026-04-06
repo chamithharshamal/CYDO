@@ -23,4 +23,20 @@ export const testimonials = [
     avatar: "/images/testimonials/avatar3.jpg",
     rating: 5,
   },
+  {
+    text: "CYDO's attention to detail and ability to scale our fintech solution was impressive. They truly understand modern engineering at scale.",
+    author: "Sashini Fernando",
+    role: "VP of Engineering",
+    company: "LankaPay",
+    avatar: "/images/testimonials/avatar4.jpg",
+    rating: 5,
+  },
+  {
+    text: "We needed a complete digital overhaul. CYDO delivered a future-proof core that has already improved our operational efficiency by 40%.",
+    author: "Kasun Perera",
+    role: "Digital Transformation Lead",
+    company: "VisionCorp",
+    avatar: "/images/testimonials/avatar5.jpg",
+    rating: 5,
+  },
 ]
