@@ -57,8 +57,8 @@ function MagnetButton({ children, href, primary = false }: { children: React.Rea
       style={{ x: springX, y: springY }}
       className={cn(
         "inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm font-bold transition-all duration-300",
-        primary 
-          ? "bg-purple-600 text-white shadow-xl shadow-purple-500/20 hover:bg-purple-500 hover:scale-105" 
+        primary
+          ? "bg-purple-600 text-white shadow-xl shadow-purple-500/20 hover:bg-purple-500 hover:scale-105"
           : "bg-white/5 text-white border border-white/10 hover:bg-white/10 backdrop-blur-md"
       )}
     >
@@ -72,11 +72,11 @@ function TypewriterText({ texts }: { texts: string[] }) {
   const [displayText, setDisplayText] = useState("")
   const [isDeleting, setIsDeleting] = useState(false)
   const speed = isDeleting ? 30 : 60
-  
+
   useEffect(() => {
     const handleTyping = () => {
       const fullText = texts[index]
-      
+
       if (!isDeleting) {
         setDisplayText(fullText.substring(0, displayText.length + 1))
         if (displayText === fullText) {
@@ -111,13 +111,20 @@ function TypewriterText({ texts }: { texts: string[] }) {
 
 export function HeroRedesign() {
   const containerRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 1.1
+    }
+  }, [])
+
   const { scrollY } = useScroll()
   const yContent = useTransform(scrollY, [0, 500], [0, -50])
   const opacity = useTransform(scrollY, [0, 300], [1, 0])
   const scale = useTransform(scrollY, [0, 300], [1, 0.95])
-  
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({
@@ -130,46 +137,53 @@ export function HeroRedesign() {
   }, [])
 
   return (
-    <section 
+    <section
       ref={containerRef}
       className="relative min-h-screen w-full overflow-hidden bg-[#030303] flex items-center justify-center mt-12 md:mt-16 pt-10"
     >
-      {/* 1. Background Layer (Image & Aura) */}
+      {/* 1. Background Layer (Video, Image & Aura) */}
       <div className="absolute inset-0 z-0">
-        {/* The Mockup Background */}
-        <motion.div 
-          style={{ 
-            scale: 1.1,
+        {/* The Video Background */}
+        <motion.div
+          style={{
+            scale: 1.25,
             x: mousePosition.x * 20,
             y: mousePosition.y * 20
           }}
-          className="absolute inset-0 z-0 opacity-60 mix-blend-screen"
+          className="absolute inset-0 z-0 opacity-40 mix-blend-screen"
         >
-          <Image 
-            src="/images/hero.png" 
-            alt="CYDO Hero Background" 
-            fill
-            className="object-cover"
-            priority
-            style={{ 
-              maskImage: 'radial-gradient(circle at center, black 40%, transparent 90%)' 
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            onPlay={() => {
+              if (videoRef.current) videoRef.current.playbackRate = 1.1
             }}
-          />
+            className="h-full w-full object-cover"
+            style={{
+              maskImage: 'radial-gradient(circle at center, black 30%, transparent 80%)',
+              WebkitMaskImage: 'radial-gradient(circle at center, black 30%, transparent 80%)'
+            }}
+          >
+            <source src="/videos/bg.mp4" type="video/mp4" />
+          </video>
         </motion.div>
 
         {/* Dynamic Aura Blobs */}
-        <motion.div 
+        <motion.div
           animate={{ x: mousePosition.x * 60, y: mousePosition.y * 60 }}
-          className="absolute -top-[10%] -left-[5%] h-[60vw] w-[60vw] rounded-full bg-purple-600/10 blur-[140px]" 
+          className="absolute -top-[10%] -left-[5%] h-[60vw] w-[60vw] rounded-full bg-purple-600/10 blur-[140px]"
         />
-        <motion.div 
+        <motion.div
           animate={{ x: mousePosition.x * -40, y: mousePosition.y * -40 }}
-          className="absolute -bottom-[10%] -right-[5%] h-[60vw] w-[60vw] rounded-full bg-pink-600/10 blur-[140px]" 
+          className="absolute -bottom-[10%] -right-[5%] h-[60vw] w-[60vw] rounded-full bg-pink-600/10 blur-[140px]"
         />
-        
+
         {/* Grid Floor Overlay */}
         <div className="absolute bottom-0 left-0 h-[40vh] w-full perspective-[1000px] overflow-hidden opacity-30">
-          <div 
+          <div
             className="absolute inset-0 origin-bottom [transform:rotateX(60deg)] bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:60px_60px]"
             style={{ maskImage: 'linear-gradient(to top, black, transparent)' }}
           />
@@ -191,7 +205,7 @@ export function HeroRedesign() {
           </div>
         </FloatingBadge>
         <FloatingBadge className="bottom-1/4 left-[8%]" delay={0.6}>
-           <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3">
             <PieChart className="h-5 w-5 text-purple-400" />
             <div className="text-left"><p className="text-xs font-bold text-white tracking-widest">SCALE</p><p className="text-sm text-purple-400/80">Global Native</p></div>
           </div>
@@ -199,7 +213,7 @@ export function HeroRedesign() {
       </div>
 
       {/* 3. Text Overlay Layer */}
-      <motion.div 
+      <motion.div
         style={{ y: yContent, opacity, scale }}
         className="relative z-20 mx-auto max-w-7xl px-4 text-center md:px-6"
       >
@@ -216,12 +230,12 @@ export function HeroRedesign() {
         </motion.h1>
 
         <div className="mt-8 h-8 md:h-10 flex justify-center items-center">
-          <TypewriterText 
+          <TypewriterText
             texts={[
               "Architecting Future-Proof Platforms",
               "Engineering Elite Digital Products",
               "Crafting Next-Gen User Experiences"
-            ]} 
+            ]}
           />
         </div>
 
@@ -231,7 +245,7 @@ export function HeroRedesign() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mx-auto mt-6 max-w-2xl text-balance text-base text-white/70 md:text-lg font-medium tracking-tight"
         >
-          We architect robust, scalable digital infrastructures for visionaries. 
+          We architect robust, scalable digital infrastructures for visionaries.
           The core engine for your next-generation cloud native applications.
         </motion.p>
 
